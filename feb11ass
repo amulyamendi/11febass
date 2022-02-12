@@ -1,0 +1,33 @@
+rice=120
+oil=150
+salt=150
+sugar=70
+bingo=15
+cname=input('enter customer name:')
+rq=int(input('enter number of rice packets:'))
+oq=int(input('enter number of oil packets:'))
+cq=int(input('enter number of salt packets:'))
+sq=int(input('enter number of sugar packets:'))
+bq=int(input('enter number of bingo packets:'))
+cc=input('enter coupon code')
+bill=(rice*rq)+(oil*oq)+(salt*sq)+(sugar*sq)+(bingo*bq)
+if bill>5000:
+    if cc=='MYBILL':
+      dis=bill*10/100
+    tax=bill*18/100
+elif bill>3000:
+    if cc=='MYBILL':
+        dis=bill*8/100
+        tax=bill*10/100
+elif bill>2000:
+    if cc='MYBILL':
+        dis=bill*5/100
+        tax=bill*18/100
+elif bill>1000:
+    if cc=='MYBILL':
+    dis=bill*3/1000
+    tax=bill*18/1000
+else:
+    print('invalid coupon code:')
+mainbill=bill-dis+tax
+ print('bill amount:',mainbill)
